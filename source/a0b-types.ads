@@ -156,4 +156,167 @@ package A0B.Types is
       Amount : Natural) return Unsigned_32
       with Import, Convention => Intrinsic;
 
+   type Reserved_1 is private;
+   type Reserved_2 is private;
+   type Reserved_3 is private;
+   type Reserved_4 is private;
+   type Reserved_5 is private;
+   type Reserved_6 is private;
+   type Reserved_7 is private;
+   type Reserved_8 is private;
+   type Reserved_9 is private;
+   type Reserved_10 is private;
+   type Reserved_11 is private;
+   type Reserved_12 is private;
+   type Reserved_13 is private;
+   type Reserved_14 is private;
+   type Reserved_15 is private;
+   type Reserved_16 is private;
+   type Reserved_17 is private;
+   type Reserved_18 is private;
+   type Reserved_19 is private;
+   type Reserved_20 is private;
+   type Reserved_21 is private;
+   type Reserved_22 is private;
+   type Reserved_23 is private;
+   type Reserved_24 is private;
+   type Reserved_25 is private;
+   type Reserved_26 is private;
+   type Reserved_27 is private;
+   type Reserved_28 is private;
+   type Reserved_29 is private;
+   type Reserved_30 is private;
+   type Reserved_31 is private;
+   type Reserved_32 is private;
+
+private
+
+   type Reserved_1 is record
+      Value : Unsigned_1;
+   end record with Pack, Size => 1;
+
+   type Reserved_2 is record
+      Value : Unsigned_2;
+   end record with Pack, Size => 2;
+
+   type Reserved_3 is record
+      Value : Unsigned_3;
+   end record with Pack, Size => 3;
+
+   type Reserved_4 is record
+      Value : Unsigned_4;
+   end record with Pack, Size => 4;
+
+   type Reserved_5 is record
+      Value : Unsigned_5;
+   end record with Pack, Size => 5;
+
+   type Reserved_6 is record
+      Value : Unsigned_6;
+   end record with Pack, Size => 6;
+
+   type Reserved_7 is record
+      Value : Unsigned_7;
+   end record with Pack, Size => 7;
+
+   type Reserved_8 is record
+      Value : Unsigned_8;
+   end record with Pack, Size => 8;
+
+   type Reserved_9 is record
+      Value : Unsigned_9;
+   end record with Pack, Size => 9;
+
+   type Reserved_10 is record
+      Value : Unsigned_10;
+   end record with Pack, Size => 10;
+
+   type Reserved_11 is record
+      Value : Unsigned_11;
+   end record with Pack, Size => 11;
+
+   type Reserved_12 is record
+      Value : Unsigned_12;
+   end record with Pack, Size => 12;
+
+   type Reserved_13 is record
+      Value : Unsigned_13;
+   end record with Pack, Size => 13;
+
+   type Reserved_14 is record
+      Value : Unsigned_14;
+   end record with Pack, Size => 14;
+
+   type Reserved_15 is record
+      Value : Unsigned_15;
+   end record with Pack, Size => 15;
+
+   type Reserved_16 is record
+      Value : Unsigned_16;
+   end record with Pack, Size => 16;
+
+   type Reserved_17 is record
+      Value : Unsigned_17;
+   end record with Pack, Size => 17;
+
+   type Reserved_18 is record
+      Value : Unsigned_18;
+   end record with Pack, Size => 18;
+
+   type Reserved_19 is record
+      Value : Unsigned_19;
+   end record with Pack, Size => 19;
+
+   type Reserved_20 is record
+      Value : Unsigned_20;
+   end record with Pack, Size => 20;
+
+   type Reserved_21 is record
+      Value : Unsigned_21;
+   end record with Pack, Size => 21;
+
+   type Reserved_22 is record
+      Value : Unsigned_22;
+   end record with Pack, Size => 22;
+
+   type Reserved_23 is record
+      Value : Unsigned_23;
+   end record with Pack, Size => 23;
+
+   type Reserved_24 is record
+      Value : Unsigned_24;
+   end record with Pack, Size => 24;
+
+   type Reserved_25 is record
+      Value : Unsigned_25;
+   end record with Pack, Size => 25;
+
+   type Reserved_26 is record
+      Value : Unsigned_26;
+   end record with Pack, Size => 26;
+
+   type Reserved_27 is record
+      Value : Unsigned_27;
+   end record with Pack, Size => 27;
+
+   type Reserved_28 is record
+      Value : Unsigned_28;
+   end record with Pack, Size => 28;
+
+   type Reserved_29 is record
+      Value : Unsigned_29;
+   end record with Pack, Size => 29;
+
+   type Reserved_30 is record
+      Value : Unsigned_30;
+   end record with Pack, Size => 30;
+
+   type Reserved_31 is record
+      Value : Unsigned_31;
+   end record with Pack, Size => 31;
+
+   type Reserved_32 is record
+      Value : Unsigned_32;
+   end record with Pack, Size => 32;
+
 end A0B.Types;
