@@ -6,7 +6,12 @@
 
 project A0B_Base is
 
+   Target      := Project'Target;
+   Runtime_Ada := Project'Runtime ("ada");
+   --  Target and Runtime_Ada is used to use separate object directorties for
+   --  each target/runtime pair.
+
    for Source_Dirs use ("../source");
-   for Object_Dir use "../.objs";
+   for Object_Dir use "../.objs/" & Target & "/" & Runtime_Ada;
 
 end A0B_Base;
