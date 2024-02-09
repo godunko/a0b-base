@@ -4,6 +4,8 @@
 --  SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 --
 
+with "a0b_common";
+
 project A0B_Base is
 
    Target      := Project'Target;
@@ -12,6 +14,10 @@ project A0B_Base is
    --  each target/runtime pair.
 
    for Source_Dirs use ("../source");
-   for Object_Dir use "../.objs/" & Target & "/" & Runtime_Ada;
+   for Object_Dir use "../.objs/" & A0B_Common.Object_Dir_Suffix;
+
+   package Compiler is
+      for Switches ("Ada") use A0B_Common.Compiler_Switches_Ada;
+   end Compiler;
 
 end A0B_Base;

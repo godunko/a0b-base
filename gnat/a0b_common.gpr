@@ -1,0 +1,27 @@
+--
+--  Copyright (C) 2024, Vadim Godunko
+--
+--  SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+--
+
+--  Common project definitions for all A0B components.
+
+abstract project A0B_Common is
+
+   Target      := Project'Target;
+   Runtime_Ada := Project'Runtime ("ada");
+   --  Target and Runtime_Ada is used to use separate object directorties for
+   --  each target/runtime pair.
+
+   Object_Dir_Suffix := Target & "/" & Runtime_Ada;
+
+   Compiler_Switches_Ada :=
+     ("-g",                   --  Generate debugging information
+      "-O2",                  --  Optimization for performance
+      "-ffunction-sections",  --  Place each function into its own section
+      "-fdata-sections");     --  Place each data item into its own section
+
+   Linker_Switches_Ada :=
+     ("-Wl,--gc-sections");  --  Enables garbage collection of unused input sections
+
+end A0B_Common;
