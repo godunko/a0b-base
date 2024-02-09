@@ -8,7 +8,7 @@
 --
 --  It is GNAT specific version, some subprograms are bound to GCC intrinsics.
 
-pragma Ada_2022;
+pragma Restrictions (No_Elaboration_Code);
 
 package A0B.Types is
 
