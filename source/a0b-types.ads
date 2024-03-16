@@ -81,6 +81,8 @@ package A0B.Types is
    type Unsigned_31 is mod 2 ** 31 with Size => 31;
    type Unsigned_32 is mod 2 ** 32 with Size => 32;
 
+   type Unsigned_64 is mod 2 ** 64 with Size => 64;
+
    function Shift_Left
      (Value  : Unsigned_8;
       Amount : Natural) return Unsigned_8
@@ -154,6 +156,31 @@ package A0B.Types is
    function Rotate_Right
      (Value  : Unsigned_32;
       Amount : Natural) return Unsigned_32
+      with Import, Convention => Intrinsic;
+
+   function Shift_Left
+     (Value  : Unsigned_64;
+      Amount : Natural) return Unsigned_64
+      with Import, Convention => Intrinsic;
+
+   function Shift_Right
+     (Value  : Unsigned_64;
+      Amount : Natural) return Unsigned_64
+      with Import, Convention => Intrinsic;
+
+   function Shift_Right_Arithmetic
+     (Value  : Unsigned_64;
+      Amount : Natural) return Unsigned_64
+      with Import, Convention => Intrinsic;
+
+   function Rotate_Left
+     (Value  : Unsigned_64;
+      Amount : Natural) return Unsigned_64
+      with Import, Convention => Intrinsic;
+
+   function Rotate_Right
+     (Value  : Unsigned_64;
+      Amount : Natural) return Unsigned_64
       with Import, Convention => Intrinsic;
 
    type Reserved_1 is private;
