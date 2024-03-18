@@ -6,10 +6,9 @@ authors = ["Vadim Godunko"]
 maintainers = ["Vadim Godunko <vgodunko@gmail.com>"]
 maintainers-logins = ["godunko"]
 licenses = "Apache-2.0 WITH LLVM-exception"
+tags = ["types", "builtins"]
 
 project-files=["gnat/a0b_base.gpr"]
-
-tags = ["embedded"]
 
 [configuration]
 disabled = true
