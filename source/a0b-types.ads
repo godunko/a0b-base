@@ -46,6 +46,8 @@ package A0B.Types is
    type Integer_31 is range -2**30 .. 2**30 - 1 with Size => 31;
    type Integer_32 is range -2**31 .. 2**31 - 1 with Size => 32;
 
+   type Integer_64 is range -2**63 .. 2**63 - 1 with Size => 64;
+
    --  Unsigned types.
 
    type Unsigned_1  is mod 2 ** 1 with Size => 1;
