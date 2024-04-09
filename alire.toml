@@ -1,6 +1,6 @@
 name = "a0b_base"
 description = "A0B: Base components"
-version = "0.2.0"
+version = "0.3.0"
 
 authors = ["Vadim Godunko"]
 maintainers = ["Vadim Godunko <vgodunko@gmail.com>"]
