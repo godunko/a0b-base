@@ -27,4 +27,9 @@ package A0B.Types.GCC_Builtins is
    --  Returns the number of trailing 0-bits in x, starting at the least
    --  significant bit position. If x is 0, the result is undefined.
 
+   function bswap (Item : A0B.Types.Unsigned_32) return A0B.Types.Unsigned_32
+     with Import, Convention => Intrinsic, External_Name => "__builtin_bswap32";
+   --  Similar to __builtin_bswap16, except the argument and return types are
+   --  32-bit.
+
 end A0B.Types.GCC_Builtins;
