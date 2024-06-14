@@ -10,6 +10,8 @@
 
 pragma Restrictions (No_Elaboration_Code);
 
+with Interfaces;
+
 package A0B.Types is
 
    pragma Pure;
@@ -20,7 +22,7 @@ package A0B.Types is
    type Integer_5  is range -2**4 .. 2**4 - 1 with Size => 5;
    type Integer_6  is range -2**5 .. 2**5 - 1 with Size => 6;
    type Integer_7  is range -2**6 .. 2**6 - 1 with Size => 7;
-   type Integer_8  is range -2**7 .. 2**7 - 1 with Size => 8;
+   subtype Integer_8 is Interfaces.Integer_8;
    type Integer_9  is range -2**8 .. 2**8 - 1 with Size => 9;
    type Integer_10 is range -2**9 .. 2**9 - 1 with Size => 10;
    type Integer_11 is range -2**10 .. 2**10 - 1 with Size => 11;
@@ -28,7 +30,7 @@ package A0B.Types is
    type Integer_13 is range -2**12 .. 2**12 - 1 with Size => 13;
    type Integer_14 is range -2**13 .. 2**13 - 1 with Size => 14;
    type Integer_15 is range -2**14 .. 2**14 - 1 with Size => 15;
-   type Integer_16 is range -2**15 .. 2**15 - 1 with Size => 16;
+   subtype Integer_16 is Interfaces.Integer_16;
    type Integer_17 is range -2**16 .. 2**16 - 1 with Size => 17;
    type Integer_18 is range -2**17 .. 2**17 - 1 with Size => 18;
    type Integer_19 is range -2**18 .. 2**18 - 1 with Size => 19;
@@ -44,9 +46,9 @@ package A0B.Types is
    type Integer_29 is range -2**28 .. 2**28 - 1 with Size => 29;
    type Integer_30 is range -2**29 .. 2**29 - 1 with Size => 30;
    type Integer_31 is range -2**30 .. 2**30 - 1 with Size => 31;
-   type Integer_32 is range -2**31 .. 2**31 - 1 with Size => 32;
+   subtype Integer_32 is Interfaces.Integer_32;
 
-   type Integer_64 is range -2**63 .. 2**63 - 1 with Size => 64;
+   subtype Integer_64 is Interfaces.Integer_64;
 
    --  Unsigned types.
 
@@ -57,7 +59,7 @@ package A0B.Types is
    type Unsigned_5  is mod 2 ** 5 with Size => 5;
    type Unsigned_6  is mod 2 ** 6 with Size => 6;
    type Unsigned_7  is mod 2 ** 7 with Size => 7;
-   type Unsigned_8  is mod 2 ** 8 with Size => 8;
+   subtype Unsigned_8  is Interfaces.Unsigned_8;
    type Unsigned_9  is mod 2 ** 9 with Size => 9;
    type Unsigned_10 is mod 2 ** 10 with Size => 10;
    type Unsigned_11 is mod 2 ** 11 with Size => 11;
@@ -65,7 +67,7 @@ package A0B.Types is
    type Unsigned_13 is mod 2 ** 13 with Size => 13;
    type Unsigned_14 is mod 2 ** 14 with Size => 14;
    type Unsigned_15 is mod 2 ** 15 with Size => 15;
-   type Unsigned_16 is mod 2 ** 16 with Size => 16;
+   subtype Unsigned_16 is Interfaces.Unsigned_16;
    type Unsigned_17 is mod 2 ** 17 with Size => 17;
    type Unsigned_18 is mod 2 ** 18 with Size => 18;
    type Unsigned_19 is mod 2 ** 19 with Size => 19;
@@ -81,109 +83,109 @@ package A0B.Types is
    type Unsigned_29 is mod 2 ** 29 with Size => 29;
    type Unsigned_30 is mod 2 ** 30 with Size => 30;
    type Unsigned_31 is mod 2 ** 31 with Size => 31;
-   type Unsigned_32 is mod 2 ** 32 with Size => 32;
+   subtype Unsigned_32 is Interfaces.Unsigned_32;
 
-   type Unsigned_64 is mod 2 ** 64 with Size => 64;
+   subtype Unsigned_64 is Interfaces.Unsigned_64;
 
    function Shift_Left
      (Value  : Unsigned_8;
       Amount : Natural) return Unsigned_8
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Shift_Left;
 
    function Shift_Right
      (Value  : Unsigned_8;
       Amount : Natural) return Unsigned_8
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Shift_Right;
 
    function Shift_Right_Arithmetic
      (Value  : Unsigned_8;
       Amount : Natural) return Unsigned_8
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Shift_Right_Arithmetic;
 
    function Rotate_Left
      (Value  : Unsigned_8;
       Amount : Natural) return Unsigned_8
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Rotate_Left;
 
    function Rotate_Right
      (Value  : Unsigned_8;
       Amount : Natural) return Unsigned_8
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Rotate_Right;
 
    function Shift_Left
      (Value  : Unsigned_16;
       Amount : Natural) return Unsigned_16
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Shift_Left;
 
    function Shift_Right
      (Value  : Unsigned_16;
       Amount : Natural) return Unsigned_16
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Shift_Right;
 
    function Shift_Right_Arithmetic
      (Value  : Unsigned_16;
       Amount : Natural) return Unsigned_16
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Shift_Right_Arithmetic;
 
    function Rotate_Left
      (Value  : Unsigned_16;
       Amount : Natural) return Unsigned_16
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Rotate_Left;
 
    function Rotate_Right
      (Value  : Unsigned_16;
       Amount : Natural) return Unsigned_16
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Rotate_Right;
 
    function Shift_Left
      (Value  : Unsigned_32;
       Amount : Natural) return Unsigned_32
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Shift_Left;
 
    function Shift_Right
      (Value  : Unsigned_32;
       Amount : Natural) return Unsigned_32
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Shift_Right;
 
    function Shift_Right_Arithmetic
      (Value  : Unsigned_32;
       Amount : Natural) return Unsigned_32
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Shift_Right_Arithmetic;
 
    function Rotate_Left
      (Value  : Unsigned_32;
       Amount : Natural) return Unsigned_32
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Rotate_Left;
 
    function Rotate_Right
      (Value  : Unsigned_32;
       Amount : Natural) return Unsigned_32
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Rotate_Right;
 
    function Shift_Left
      (Value  : Unsigned_64;
       Amount : Natural) return Unsigned_64
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Shift_Left;
 
    function Shift_Right
      (Value  : Unsigned_64;
       Amount : Natural) return Unsigned_64
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Shift_Right;
 
    function Shift_Right_Arithmetic
      (Value  : Unsigned_64;
       Amount : Natural) return Unsigned_64
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Shift_Right_Arithmetic;
 
    function Rotate_Left
      (Value  : Unsigned_64;
       Amount : Natural) return Unsigned_64
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Rotate_Left;
 
    function Rotate_Right
      (Value  : Unsigned_64;
       Amount : Natural) return Unsigned_64
-      with Import, Convention => Intrinsic;
+      renames Interfaces.Rotate_Right;
 
    type Reserved_1 is private;
    type Reserved_2 is private;
