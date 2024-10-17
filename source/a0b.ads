@@ -10,4 +10,11 @@ package A0B is
 
    pragma Pure;
 
+   type Operation_Status is
+     (Active,    --  Active
+      Success,   --  Completed successfully
+      Failure);  --  Failed
+   --  Status of the requested operation.
+   --  It is declared here to make it available for all drivers.
+
 end A0B;
