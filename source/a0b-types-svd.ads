@@ -4,11 +4,9 @@
 --  SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 --
 
-pragma Restrictions (No_Elaboration_Code);
-
-package A0B.Types.SVD is
-
-   pragma Pure;
+package A0B.Types.SVD
+  with Pure, No_Elaboration_Code_All
+is
 
    subtype Bit  is A0B.Types.Unsigned_1;
    subtype Byte is A0B.Types.Unsigned_8;

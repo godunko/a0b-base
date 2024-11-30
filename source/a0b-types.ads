@@ -8,13 +8,11 @@
 --
 --  It is GNAT specific version, some subprograms are bound to GCC intrinsics.
 
-pragma Restrictions (No_Elaboration_Code);
-
 with Interfaces;
 
-package A0B.Types is
-
-   pragma Pure;
+package A0B.Types
+  with Pure, No_Elaboration_Code_All
+is
 
    type Integer_2  is range -2**1 .. 2**1 - 1 with Size => 2;
    type Integer_3  is range -2**2 .. 2**2 - 1 with Size => 3;

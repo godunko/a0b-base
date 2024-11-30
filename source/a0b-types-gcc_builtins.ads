@@ -6,11 +6,9 @@
 
 --  Bindings for GCC builtins functions.
 
-pragma Restrictions (No_Elaboration_Code);
-
-package A0B.Types.GCC_Builtins is
-
-   pragma Pure;
+package A0B.Types.GCC_Builtins
+  with Pure, No_Elaboration_Code_All
+is
 
    function ffs (Item : A0B.Types.Integer_32) return A0B.Types.Integer_32
      with Import, Convention => Intrinsic, External_Name => "__builtin_ffs";
