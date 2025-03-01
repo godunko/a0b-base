@@ -1,5 +1,5 @@
 --
---  Copyright (C) 2024, Vadim Godunko
+--  Copyright (C) 2024-2025, Vadim Godunko
 --
 --  SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 --
@@ -218,134 +218,333 @@ is
    type Reserved_31 is private;
    type Reserved_32 is private;
 
+   function Zero return Reserved_1;
+   function Zero return Reserved_2;
+   function Zero return Reserved_3;
+   function Zero return Reserved_4;
+   function Zero return Reserved_5;
+   function Zero return Reserved_6;
+   function Zero return Reserved_7;
+   function Zero return Reserved_8;
+   function Zero return Reserved_9;
+   function Zero return Reserved_10;
+   function Zero return Reserved_11;
+   function Zero return Reserved_12;
+   function Zero return Reserved_13;
+   function Zero return Reserved_14;
+   function Zero return Reserved_15;
+   function Zero return Reserved_16;
+   function Zero return Reserved_17;
+   function Zero return Reserved_18;
+   function Zero return Reserved_19;
+   function Zero return Reserved_20;
+   function Zero return Reserved_21;
+   function Zero return Reserved_22;
+   function Zero return Reserved_23;
+   function Zero return Reserved_24;
+   function Zero return Reserved_25;
+   function Zero return Reserved_26;
+   function Zero return Reserved_27;
+   function Zero return Reserved_28;
+   function Zero return Reserved_29;
+   function Zero return Reserved_30;
+   function Zero return Reserved_31;
+   function Zero return Reserved_32;
+
+   function Is_Zero (Value : Reserved_1) return Boolean;
+   function Is_Zero (Value : Reserved_2) return Boolean;
+   function Is_Zero (Value : Reserved_3) return Boolean;
+   function Is_Zero (Value : Reserved_4) return Boolean;
+   function Is_Zero (Value : Reserved_5) return Boolean;
+   function Is_Zero (Value : Reserved_6) return Boolean;
+   function Is_Zero (Value : Reserved_7) return Boolean;
+   function Is_Zero (Value : Reserved_8) return Boolean;
+   function Is_Zero (Value : Reserved_9) return Boolean;
+   function Is_Zero (Value : Reserved_10) return Boolean;
+   function Is_Zero (Value : Reserved_11) return Boolean;
+   function Is_Zero (Value : Reserved_12) return Boolean;
+   function Is_Zero (Value : Reserved_13) return Boolean;
+   function Is_Zero (Value : Reserved_14) return Boolean;
+   function Is_Zero (Value : Reserved_15) return Boolean;
+   function Is_Zero (Value : Reserved_16) return Boolean;
+   function Is_Zero (Value : Reserved_17) return Boolean;
+   function Is_Zero (Value : Reserved_18) return Boolean;
+   function Is_Zero (Value : Reserved_19) return Boolean;
+   function Is_Zero (Value : Reserved_20) return Boolean;
+   function Is_Zero (Value : Reserved_21) return Boolean;
+   function Is_Zero (Value : Reserved_22) return Boolean;
+   function Is_Zero (Value : Reserved_23) return Boolean;
+   function Is_Zero (Value : Reserved_24) return Boolean;
+   function Is_Zero (Value : Reserved_25) return Boolean;
+   function Is_Zero (Value : Reserved_26) return Boolean;
+   function Is_Zero (Value : Reserved_27) return Boolean;
+   function Is_Zero (Value : Reserved_28) return Boolean;
+   function Is_Zero (Value : Reserved_29) return Boolean;
+   function Is_Zero (Value : Reserved_30) return Boolean;
+   function Is_Zero (Value : Reserved_31) return Boolean;
+   function Is_Zero (Value : Reserved_32) return Boolean;
+   --  Return `True` when given value is equal to zero.
+
 private
+
+   use type Interfaces.Unsigned_8;
+   use type Interfaces.Unsigned_16;
+   use type Interfaces.Unsigned_32;
 
    type Reserved_1 is record
       Value : Unsigned_1;
    end record with Pack, Size => 1;
 
+   function Zero return Reserved_1 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_1) return Boolean is (Value.Value = 0);
+
    type Reserved_2 is record
       Value : Unsigned_2;
    end record with Pack, Size => 2;
+
+   function Zero return Reserved_2 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_2) return Boolean is (Value.Value = 0);
 
    type Reserved_3 is record
       Value : Unsigned_3;
    end record with Pack, Size => 3;
 
+   function Zero return Reserved_3 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_3) return Boolean is (Value.Value = 0);
+
    type Reserved_4 is record
       Value : Unsigned_4;
    end record with Pack, Size => 4;
+
+   function Zero return Reserved_4 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_4) return Boolean is (Value.Value = 0);
 
    type Reserved_5 is record
       Value : Unsigned_5;
    end record with Pack, Size => 5;
 
+   function Zero return Reserved_5 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_5) return Boolean is (Value.Value = 0);
+
    type Reserved_6 is record
       Value : Unsigned_6;
    end record with Pack, Size => 6;
+
+   function Zero return Reserved_6 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_6) return Boolean is (Value.Value = 0);
 
    type Reserved_7 is record
       Value : Unsigned_7;
    end record with Pack, Size => 7;
 
+   function Zero return Reserved_7 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_7) return Boolean is (Value.Value = 0);
+
    type Reserved_8 is record
       Value : Unsigned_8;
    end record with Pack, Size => 8;
+
+   function Zero return Reserved_8 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_8) return Boolean is (Value.Value = 0);
 
    type Reserved_9 is record
       Value : Unsigned_9;
    end record with Pack, Size => 9;
 
+   function Zero return Reserved_9 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_9) return Boolean is (Value.Value = 0);
+
    type Reserved_10 is record
       Value : Unsigned_10;
    end record with Pack, Size => 10;
+
+   function Zero return Reserved_10 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_10) return Boolean is (Value.Value = 0);
 
    type Reserved_11 is record
       Value : Unsigned_11;
    end record with Pack, Size => 11;
 
+   function Zero return Reserved_11 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_11) return Boolean is (Value.Value = 0);
+
    type Reserved_12 is record
       Value : Unsigned_12;
    end record with Pack, Size => 12;
+
+   function Zero return Reserved_12 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_12) return Boolean is (Value.Value = 0);
 
    type Reserved_13 is record
       Value : Unsigned_13;
    end record with Pack, Size => 13;
 
+   function Zero return Reserved_13 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_13) return Boolean is (Value.Value = 0);
+
    type Reserved_14 is record
       Value : Unsigned_14;
    end record with Pack, Size => 14;
+
+   function Zero return Reserved_14 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_14) return Boolean is (Value.Value = 0);
 
    type Reserved_15 is record
       Value : Unsigned_15;
    end record with Pack, Size => 15;
 
+   function Zero return Reserved_15 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_15) return Boolean is (Value.Value = 0);
+
    type Reserved_16 is record
       Value : Unsigned_16;
    end record with Pack, Size => 16;
+
+   function Zero return Reserved_16 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_16) return Boolean is (Value.Value = 0);
 
    type Reserved_17 is record
       Value : Unsigned_17;
    end record with Pack, Size => 17;
 
+   function Zero return Reserved_17 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_17) return Boolean is (Value.Value = 0);
+
    type Reserved_18 is record
       Value : Unsigned_18;
    end record with Pack, Size => 18;
+
+   function Zero return Reserved_18 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_18) return Boolean is (Value.Value = 0);
 
    type Reserved_19 is record
       Value : Unsigned_19;
    end record with Pack, Size => 19;
 
+   function Zero return Reserved_19 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_19) return Boolean is (Value.Value = 0);
+
    type Reserved_20 is record
       Value : Unsigned_20;
    end record with Pack, Size => 20;
+
+   function Zero return Reserved_20 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_20) return Boolean is (Value.Value = 0);
 
    type Reserved_21 is record
       Value : Unsigned_21;
    end record with Pack, Size => 21;
 
+   function Zero return Reserved_21 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_21) return Boolean is (Value.Value = 0);
+
    type Reserved_22 is record
       Value : Unsigned_22;
    end record with Pack, Size => 22;
+
+   function Zero return Reserved_22 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_22) return Boolean is (Value.Value = 0);
 
    type Reserved_23 is record
       Value : Unsigned_23;
    end record with Pack, Size => 23;
 
+   function Zero return Reserved_23 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_23) return Boolean is (Value.Value = 0);
+
    type Reserved_24 is record
       Value : Unsigned_24;
    end record with Pack, Size => 24;
+
+   function Zero return Reserved_24 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_24) return Boolean is (Value.Value = 0);
 
    type Reserved_25 is record
       Value : Unsigned_25;
    end record with Pack, Size => 25;
 
+   function Zero return Reserved_25 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_25) return Boolean is (Value.Value = 0);
+
    type Reserved_26 is record
       Value : Unsigned_26;
    end record with Pack, Size => 26;
+
+   function Zero return Reserved_26 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_26) return Boolean is (Value.Value = 0);
 
    type Reserved_27 is record
       Value : Unsigned_27;
    end record with Pack, Size => 27;
 
+   function Zero return Reserved_27 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_27) return Boolean is (Value.Value = 0);
+
    type Reserved_28 is record
       Value : Unsigned_28;
    end record with Pack, Size => 28;
+
+   function Zero return Reserved_28 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_28) return Boolean is (Value.Value = 0);
 
    type Reserved_29 is record
       Value : Unsigned_29;
    end record with Pack, Size => 29;
 
+   function Zero return Reserved_29 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_29) return Boolean is (Value.Value = 0);
+
    type Reserved_30 is record
       Value : Unsigned_30;
    end record with Pack, Size => 30;
+
+   function Zero return Reserved_30 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_30) return Boolean is (Value.Value = 0);
 
    type Reserved_31 is record
       Value : Unsigned_31;
    end record with Pack, Size => 31;
 
+   function Zero return Reserved_31 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_31) return Boolean is (Value.Value = 0);
+
    type Reserved_32 is record
       Value : Unsigned_32;
    end record with Pack, Size => 32;
+
+   function Zero return Reserved_32 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_32) return Boolean is (Value.Value = 0);
 
 end A0B.Types;
