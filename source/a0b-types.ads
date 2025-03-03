@@ -287,73 +287,56 @@ is
 
 private
 
-   use type Interfaces.Unsigned_8;
    use type Interfaces.Unsigned_16;
    use type Interfaces.Unsigned_32;
 
-   type Reserved_1 is record
-      Value : Unsigned_1;
-   end record with Pack, Size => 1;
+   type Reserved_1 is mod 2 ** 1 with Size => 1;
 
-   function Zero return Reserved_1 is (Value => 0);
+   function Zero return Reserved_1 is (0);
 
-   function Is_Zero (Value : Reserved_1) return Boolean is (Value.Value = 0);
+   function Is_Zero (Value : Reserved_1) return Boolean is (Value = 0);
 
-   type Reserved_2 is record
-      Value : Unsigned_2;
-   end record with Pack, Size => 2;
+   type Reserved_2 is mod 2 ** 2 with Size => 2;
 
-   function Zero return Reserved_2 is (Value => 0);
+   function Zero return Reserved_2 is (0);
 
-   function Is_Zero (Value : Reserved_2) return Boolean is (Value.Value = 0);
+   function Is_Zero (Value : Reserved_2) return Boolean is (Value = 0);
 
-   type Reserved_3 is record
-      Value : Unsigned_3;
-   end record with Pack, Size => 3;
+   type Reserved_3 is mod 2 ** 3 with Size => 3;
 
-   function Zero return Reserved_3 is (Value => 0);
+   function Zero return Reserved_3 is (0);
 
-   function Is_Zero (Value : Reserved_3) return Boolean is (Value.Value = 0);
+   function Is_Zero (Value : Reserved_3) return Boolean is (Value = 0);
 
-   type Reserved_4 is record
-      Value : Unsigned_4;
-   end record with Pack, Size => 4;
+   type Reserved_4 is mod 2 ** 4 with Size => 4;
 
-   function Zero return Reserved_4 is (Value => 0);
+   function Zero return Reserved_4 is (0);
 
-   function Is_Zero (Value : Reserved_4) return Boolean is (Value.Value = 0);
+   function Is_Zero (Value : Reserved_4) return Boolean is (Value = 0);
 
-   type Reserved_5 is record
-      Value : Unsigned_5;
-   end record with Pack, Size => 5;
+   type Reserved_5 is mod 2 ** 5 with Size => 5;
 
-   function Zero return Reserved_5 is (Value => 0);
+   function Zero return Reserved_5 is (0);
 
-   function Is_Zero (Value : Reserved_5) return Boolean is (Value.Value = 0);
+   function Is_Zero (Value : Reserved_5) return Boolean is (Value = 0);
 
-   type Reserved_6 is record
-      Value : Unsigned_6;
-   end record with Pack, Size => 6;
+   type Reserved_6 is mod 2 ** 6 with Size => 6;
 
-   function Zero return Reserved_6 is (Value => 0);
+   function Zero return Reserved_6 is (0);
 
-   function Is_Zero (Value : Reserved_6) return Boolean is (Value.Value = 0);
+   function Is_Zero (Value : Reserved_6) return Boolean is (Value = 0);
 
-   type Reserved_7 is record
-      Value : Unsigned_7;
-   end record with Pack, Size => 7;
+   type Reserved_7 is mod 2 ** 7 with Size => 7;
 
-   function Zero return Reserved_7 is (Value => 0);
+   function Zero return Reserved_7 is (0);
 
-   function Is_Zero (Value : Reserved_7) return Boolean is (Value.Value = 0);
+   function Is_Zero (Value : Reserved_7) return Boolean is (Value = 0);
 
-   type Reserved_8 is record
-      Value : Unsigned_8;
-   end record with Pack, Size => 8;
+   type Reserved_8 is mod 2 ** 8 with Size => 8;
 
-   function Zero return Reserved_8 is (Value => 0);
+   function Zero return Reserved_8 is (0);
 
-   function Is_Zero (Value : Reserved_8) return Boolean is (Value.Value = 0);
+   function Is_Zero (Value : Reserved_8) return Boolean is (Value = 0);
 
    type Reserved_9 is record
       Value : Unsigned_9;
