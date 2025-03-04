@@ -1,5 +1,5 @@
 --
---  Copyright (C) 2024, Vadim Godunko
+--  Copyright (C) 2024-2025, Vadim Godunko
 --
 --  SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 --
@@ -14,6 +14,7 @@ abstract project A0B_Common is
    --  each target/runtime pair.
 
    Object_Dir_Suffix := Target & "/" & Runtime_Ada;
+   Library_Dir_Suffix := Target & "/" & Runtime_Ada;
 
    Compiler_Switches_Ada :=
      ("-g",                   --  Generate debugging information
