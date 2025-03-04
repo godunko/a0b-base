@@ -1,2 +1,3 @@
-alire
-.objs
+/.libs/
+/.objs/
+/alire/
