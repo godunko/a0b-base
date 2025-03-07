@@ -39,6 +39,30 @@ is
    --  XXX GCC 14: Can't be declared as expression function or inlines due to
    --  bug in the compiler.
 
+   type Unsigned_24 is record
+      Value : A0B.Types.Unsigned_24;
+   end record
+     with Size                 => 24,
+          Bit_Order            => System.High_Order_First,
+          Scalar_Storage_Order => System.High_Order_First;
+
+   for Unsigned_24 use record
+      Value at 0 range 0 .. 23;
+   end record;
+
+   function "="
+     (Left  : A0B.Types.Big_Endian.Unsigned_24;
+      Right : A0B.Types.Unsigned_24) return Boolean;
+   --  XXX GCC 14: Can't be declared as expression function or inlines due to
+   --  bug in the compiler.
+
+   function "="
+     (Left  : A0B.Types.Unsigned_24;
+      Right : A0B.Types.Big_Endian.Unsigned_24)
+      return Boolean;  --  with Inline_Always;
+   --  XXX GCC 14: Can't be declared as expression function or inlines due to
+   --  bug in the compiler.
+
    type Unsigned_32 is record
       Value : A0B.Types.Unsigned_32;
    end record

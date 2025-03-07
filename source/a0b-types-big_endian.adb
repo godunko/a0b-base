@@ -28,6 +28,23 @@ package body A0B.Types.Big_Endian is
    ---------
 
    function "="
+     (Left  : A0B.Types.Big_Endian.Unsigned_24;
+      Right : A0B.Types.Unsigned_24) return Boolean is (Left.Value = Right);
+
+   ---------
+   -- "=" --
+   ---------
+
+   function "="
+     (Left  : A0B.Types.Unsigned_24;
+      Right : A0B.Types.Big_Endian.Unsigned_24)
+      return Boolean is (Left = Right.Value);
+
+   ---------
+   -- "=" --
+   ---------
+
+   function "="
      (Left  : A0B.Types.Big_Endian.Unsigned_32;
       Right : A0B.Types.Unsigned_32) return Boolean is (Left.Value = Right);
 
