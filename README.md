@@ -12,7 +12,7 @@ This crate provides root packages for A0B's packages hierarchy and some componen
 
 ## Configuration variables
 
-`a0b_base` crate has configuration variable `a0b_base.tasking` to specify presence of tasking support. Possible values are:
+`a0b_base` crate has configuration variable `a0b_base.tasking` to specify presence of tasking support. This variable is not used by this crate, and provided to simplify configuration of other crates. Possible values are:
   * `none` there is no tasking support, `light` GNAT runtime is used. Ada tasking constructs are not supported.
   * `ada` tasking support is provided by Ada runtime. It is case of `light-tasking` and `embedded` GNAT runtimes. Ada tasking constructs are supported.
-  * `a0b` simple tasking scheduler is provided by `a0b_tasking` crate and `light` GNAT runtime is used. Ada tasking constructs are not supported.
+  * `a0b` simple thread scheduler is provided by [`a0b_tasking`](https://github.com/godunko/a0b-tasking) crate and `light` GNAT runtime is used. Ada tasking constructs are not supported, however, application can manage threads "manually".
