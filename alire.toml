@@ -12,4 +12,9 @@ tags = ["a0b", "types", "builtins"]
 project-files=["gnat/a0b_base.gpr"]
 
 [configuration]
-disabled = true
+generate_ada = false
+generate_gpr = true
+generate_c = false
+
+[configuration.variables]
+Tasking = {type = "Enum", values = ["none", "ada", "a0b"], default = "none"}
