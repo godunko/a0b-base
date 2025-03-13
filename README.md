@@ -9,3 +9,10 @@ This crate provides root packages for A0B's packages hierarchy and some componen
  * `Unsigned_*_Array` types in the [`A0B.Types.Arrays`](https://github.com/godunko/a0b-base/blob/main/source/a0b-types-arrays.ads) package
  * Bindings to GCC's builtins (`bswap`, `clz`, `ffs`, etc.) in the [`A0B.Types.GCC_Builtins`](https://github.com/godunko/a0b-base/blob/main/source/a0b-types-gcc_builtins.ads) package
  * Set of type declarations to be used with SVD2Ada code generator in the [`A0B.Types.SVD`](https://github.com/godunko/a0b-base/blob/main/source/a0b-types-svd.ads) package
+
+## Configuration variables
+
+`a0b_base` crate has configuration variable `a0b_base.tasking` to specify presence of tasking support. Possible values are:
+  * `none` there is no tasking support, `light` GNAT runtime is used. Ada tasking constructs are not supported.
+  * `ada` tasking support is provided by Ada runtime. It is case of `light-tasking` and `embedded` GNAT runtimes. Ada tasking constructs are supported.
+  * `a0b` simple tasking scheduler is provided by `a0b_tasking` crate and `light` GNAT runtime is used. Ada tasking constructs are not supported.
