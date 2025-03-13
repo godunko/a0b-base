@@ -1,7 +1,7 @@
 name = "a0b_base"
 description = "A0B: Base components"
 website = "https://github.com/godunko/a0b-base"
-version = "0.4.0"
+version = "0.5.0-dev"
 
 authors = ["Vadim Godunko"]
 maintainers = ["Vadim Godunko <vgodunko@gmail.com>"]
