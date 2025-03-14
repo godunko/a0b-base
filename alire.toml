@@ -13,8 +13,8 @@ project-files=["gnat/a0b_base.gpr"]
 
 [configuration]
 generate_ada = false
-generate_gpr = true
 generate_c = false
+generate_gpr = true
 
 [configuration.variables]
 Tasking = {type = "Enum", values = ["none", "ada", "a0b"], default = "none"}
