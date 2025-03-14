@@ -6,6 +6,8 @@
 
 --  Common project definitions for all A0B components.
 
+with "../config/a0b_base_config.gpr";
+
 abstract project A0B_Common is
 
    Target      := Project'Target;
@@ -13,8 +15,8 @@ abstract project A0B_Common is
    --  Target and Runtime_Ada is used to use separate object directorties for
    --  each target/runtime pair.
 
-   Object_Dir_Suffix := Target & "/" & Runtime_Ada;
-   Library_Dir_Suffix := Target & "/" & Runtime_Ada;
+   Object_Dir_Suffix := Target & "/" & Runtime_Ada & "/" & A0B_Base_Config.Tasking;
+   Library_Dir_Suffix := Target & "/" & Runtime_Ada & "/" & A0B_Base_Config.Tasking;
 
    Compiler_Switches_Ada :=
      ("-g",                   --  Generate debugging information
