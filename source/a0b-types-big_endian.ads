@@ -1,5 +1,5 @@
 --
---  Copyright (C) 2025, Vadim Godunko
+--  Copyright (C) 2025-2026, Vadim Godunko
 --
 --  SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 --
@@ -83,6 +83,30 @@ is
    function "="
      (Left  : A0B.Types.Unsigned_32;
       Right : A0B.Types.Big_Endian.Unsigned_32)
+      return Boolean;  --  with Inline_Always;
+   --  XXX GCC 14: Can't be declared as expression function or inlines due to
+   --  bug in the compiler.
+
+   type Unsigned_64 is record
+      Value : A0B.Types.Unsigned_64;
+   end record
+     with Size                 => 64,
+          Bit_Order            => System.High_Order_First,
+          Scalar_Storage_Order => System.High_Order_First;
+
+   for Unsigned_64 use record
+      Value at 0 range 0 .. 63;
+   end record;
+
+   function "="
+     (Left  : A0B.Types.Big_Endian.Unsigned_64;
+      Right : A0B.Types.Unsigned_64) return Boolean;
+   --  XXX GCC 14: Can't be declared as expression function or inlines due to
+   --  bug in the compiler.
+
+   function "="
+     (Left  : A0B.Types.Unsigned_64;
+      Right : A0B.Types.Big_Endian.Unsigned_64)
       return Boolean;  --  with Inline_Always;
    --  XXX GCC 14: Can't be declared as expression function or inlines due to
    --  bug in the compiler.
