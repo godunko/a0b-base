@@ -1,5 +1,5 @@
 --
---  Copyright (C) 2024-2025, Vadim Godunko
+--  Copyright (C) 2024-2026, Vadim Godunko
 --
 --  SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 --
@@ -82,6 +82,8 @@ is
    type Unsigned_30 is mod 2 ** 30 with Size => 30;
    type Unsigned_31 is mod 2 ** 31 with Size => 31;
    subtype Unsigned_32 is Interfaces.Unsigned_32;
+
+   type Unsigned_48 is mod 2 ** 48 with Size => 48;
 
    subtype Unsigned_64 is Interfaces.Unsigned_64;
 
