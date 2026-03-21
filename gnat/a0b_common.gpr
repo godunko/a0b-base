@@ -1,5 +1,5 @@
 --
---  Copyright (C) 2024-2025, Vadim Godunko
+--  Copyright (C) 2024-2026, Vadim Godunko
 --
 --  SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 --
@@ -10,13 +10,12 @@ with "../config/a0b_base_config.gpr";
 
 abstract project A0B_Common is
 
-   Target      := Project'Target;
-   Runtime_Ada := Project'Runtime ("ada");
-   --  Target and Runtime_Ada is used to use separate object directorties for
+   Target := Project'Target;
+   --  Target is used to use separate object directorties for
    --  each target/runtime pair.
 
-   Object_Dir_Suffix := Target & "/" & Runtime_Ada & "/" & A0B_Base_Config.Tasking;
-   Library_Dir_Suffix := Target & "/" & Runtime_Ada & "/" & A0B_Base_Config.Tasking;
+   Object_Dir_Suffix := Target & "/" & A0B_Base_Config.Tasking;
+   Library_Dir_Suffix := Target & "/" & A0B_Base_Config.Tasking;
 
    Compiler_Switches_Ada :=
      ("-g",                   --  Generate debugging information
