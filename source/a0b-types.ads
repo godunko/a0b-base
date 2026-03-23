@@ -219,6 +219,7 @@ is
    type Reserved_30 is private;
    type Reserved_31 is private;
    type Reserved_32 is private;
+   type Reserved_64 is private;
 
    function Zero return Reserved_1;
    function Zero return Reserved_2;
@@ -252,6 +253,7 @@ is
    function Zero return Reserved_30;
    function Zero return Reserved_31;
    function Zero return Reserved_32;
+   function Zero return Reserved_64;
 
    function Is_Zero (Value : Reserved_1) return Boolean;
    function Is_Zero (Value : Reserved_2) return Boolean;
@@ -285,12 +287,14 @@ is
    function Is_Zero (Value : Reserved_30) return Boolean;
    function Is_Zero (Value : Reserved_31) return Boolean;
    function Is_Zero (Value : Reserved_32) return Boolean;
+   function Is_Zero (Value : Reserved_64) return Boolean;
    --  Return `True` when given value is equal to zero.
 
 private
 
    use type Interfaces.Unsigned_16;
    use type Interfaces.Unsigned_32;
+   use type Interfaces.Unsigned_64;
 
    type Reserved_1 is mod 2 ** 1 with Size => 1;
 
@@ -531,5 +535,13 @@ private
    function Zero return Reserved_32 is (Value => 0);
 
    function Is_Zero (Value : Reserved_32) return Boolean is (Value.Value = 0);
+
+   type Reserved_64 is record
+      Value : Unsigned_64;
+   end record with Pack, Size => 64;
+
+   function Zero return Reserved_64 is (Value => 0);
+
+   function Is_Zero (Value : Reserved_64) return Boolean is (Value.Value = 0);
 
 end A0B.Types;
