@@ -111,4 +111,28 @@ is
    --  XXX GCC 14: Can't be declared as expression function or inlines due to
    --  bug in the compiler.
 
+   type Integer_16 is record
+      Value : A0B.Types.Integer_16;
+   end record
+     with Size                 => 16,
+          Bit_Order            => System.High_Order_First,
+          Scalar_Storage_Order => System.High_Order_First;
+
+   for Integer_16 use record
+      Value at 0 range 0 .. 15;
+   end record;
+
+   function "="
+     (Left  : A0B.Types.Big_Endian.Integer_16;
+      Right : A0B.Types.Integer_16) return Boolean;
+   --  XXX GCC 14: Can't be declared as expression function or inlines due to
+   --  bug in the compiler.
+
+   function "="
+     (Left  : A0B.Types.Integer_16;
+      Right : A0B.Types.Big_Endian.Integer_16)
+      return Boolean;  --  with Inline_Always;
+   --  XXX GCC 14: Can't be declared as expression function or inlines due to
+   --  bug in the compiler.
+
 end A0B.Types.Big_Endian;
