@@ -1,7 +1,7 @@
 name = "a0b_base"
 description = "Fundamental types, GCC built-ins, and base packages for Ada projects"
 website = "https://github.com/godunko/a0b-base"
-version = "0.5.0"
+version = "0.6.0-dev"
 long-description = """
 The `a0b_base` crate provides the root package hierarchy and foundational components tailored for embedded, bare-metal, and low-level Ada applications. 
 
