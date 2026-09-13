@@ -14,6 +14,7 @@ package A0B.Types.Enumerable
   with Pure, No_Elaboration_Code_All
 is
 
+   type Enumerable_1 is mod 2 ** 1 with Size => 1;
    type Enumerable_2 is mod 2 ** 2 with Size => 2;
    type Enumerable_3 is mod 2 ** 3 with Size => 3;
    type Enumerable_4 is mod 2 ** 4 with Size => 4;
@@ -21,6 +22,42 @@ is
    type Enumerable_6 is mod 2 ** 6 with Size => 6;
    type Enumerable_7 is mod 2 ** 7 with Size => 7;
    type Enumerable_8 is mod 2 ** 8 with Size => 8;
+
+   overriding function "+"
+     (Right : Enumerable_1) return Enumerable_1 is abstract;
+   overriding function "-"
+     (Right : Enumerable_1) return Enumerable_1 is abstract;
+   overriding function "not"
+     (Right : Enumerable_1) return Enumerable_1 is abstract;
+   overriding function "+"
+     (Left  : Enumerable_1;
+      Right : Enumerable_1) return Enumerable_1 is abstract;
+   overriding function "-"
+     (Left  : Enumerable_1;
+      Right : Enumerable_1) return Enumerable_1 is abstract;
+   overriding function "*"
+     (Left  : Enumerable_1;
+      Right : Enumerable_1) return Enumerable_1 is abstract;
+   overriding function "/"
+     (Left  : Enumerable_1;
+      Right : Enumerable_1) return Enumerable_1 is abstract;
+   overriding function "**"
+     (Left  : Enumerable_1; Right : Natural) return Enumerable_1 is abstract;
+   overriding function "mod"
+     (Left  : Enumerable_1;
+      Right : Enumerable_1) return Enumerable_1 is abstract;
+   overriding function "rem"
+     (Left  : Enumerable_1;
+      Right : Enumerable_1) return Enumerable_1 is abstract;
+   overriding function "and"
+     (Left  : Enumerable_1;
+      Right : Enumerable_1) return Enumerable_1 is abstract;
+   overriding function "or"
+     (Left  : Enumerable_1;
+      Right : Enumerable_1) return Enumerable_1 is abstract;
+   overriding function "xor"
+     (Left  : Enumerable_1;
+      Right : Enumerable_1) return Enumerable_1 is abstract;
 
    overriding function "+"
      (Right : Enumerable_2) return Enumerable_2 is abstract;
