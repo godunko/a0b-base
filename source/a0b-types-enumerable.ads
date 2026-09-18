@@ -22,6 +22,7 @@ is
    type Enumerable_6 is mod 2 ** 6 with Size => 6;
    type Enumerable_7 is mod 2 ** 7 with Size => 7;
    type Enumerable_8 is mod 2 ** 8 with Size => 8;
+   type Enumerable_16 is mod 2 ** 16 with Size => 16;
 
    overriding function "+"
      (Right : Enumerable_1) return Enumerable_1 is abstract;
@@ -310,5 +311,41 @@ is
    overriding function "xor"
      (Left  : Enumerable_8;
       Right : Enumerable_8) return Enumerable_8 is abstract;
+
+   overriding function "+"
+     (Right : Enumerable_16) return Enumerable_16 is abstract;
+   overriding function "-"
+     (Right : Enumerable_16) return Enumerable_16 is abstract;
+   overriding function "not"
+     (Right : Enumerable_16) return Enumerable_16 is abstract;
+   overriding function "+"
+     (Left  : Enumerable_16;
+      Right : Enumerable_16) return Enumerable_16 is abstract;
+   overriding function "-"
+     (Left  : Enumerable_16;
+      Right : Enumerable_16) return Enumerable_16 is abstract;
+   overriding function "*"
+     (Left  : Enumerable_16;
+      Right : Enumerable_16) return Enumerable_16 is abstract;
+   overriding function "/"
+     (Left  : Enumerable_16;
+      Right : Enumerable_16) return Enumerable_16 is abstract;
+   overriding function "**"
+     (Left  : Enumerable_16; Right : Natural) return Enumerable_16 is abstract;
+   overriding function "mod"
+     (Left  : Enumerable_16;
+      Right : Enumerable_16) return Enumerable_16 is abstract;
+   overriding function "rem"
+     (Left  : Enumerable_16;
+      Right : Enumerable_16) return Enumerable_16 is abstract;
+   overriding function "and"
+     (Left  : Enumerable_16;
+      Right : Enumerable_16) return Enumerable_16 is abstract;
+   overriding function "or"
+     (Left  : Enumerable_16;
+      Right : Enumerable_16) return Enumerable_16 is abstract;
+   overriding function "xor"
+     (Left  : Enumerable_16;
+      Right : Enumerable_16) return Enumerable_16 is abstract;
 
 end A0B.Types.Enumerable;
