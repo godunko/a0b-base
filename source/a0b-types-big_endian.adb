@@ -7,9 +7,6 @@
 package body A0B.Types.Big_Endian is
 
    use type A0B.Types.Integer_16;
-   use type A0B.Types.Unsigned_64;
-   --  XXX FSF GCC 15: "=" operator is not visible, why is it visible for
-   --  other types ???
 
    ---------
    -- "=" --

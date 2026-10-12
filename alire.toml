@@ -31,3 +31,6 @@ generate_gpr = true
 
 [configuration.variables]
 Tasking = {type = "Enum", values = ["none", "ada", "a0b"], default = "none"}
+
+[[depends-on]]
+gnat = ">16"
