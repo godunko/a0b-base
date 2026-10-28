@@ -1,5 +1,5 @@
 name = "a0b_base"
-version = "0.6.0-dev"
+version = "0.6.0"
 website = "https://github.com/godunko/a0b-base"
 description = "Fundamental types, GCC built-ins, and base packages for Ada projects"
 long-description = """
